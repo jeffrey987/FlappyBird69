@@ -1,0 +1,11 @@
+library/*
+temp/*
+.history/*
+profiles/*
+profiles/*
+profiles/v2/editor/packages.json
+profiles/v2/packages/reference-image.json
+profiles/v2/packages/scene.json
+settings/v2/packages/engine.json
+settings/v2/packages/cocos-service.json
+profiles/v2/packages/scene.json
