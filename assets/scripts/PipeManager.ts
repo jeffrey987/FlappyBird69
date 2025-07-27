@@ -1,4 +1,4 @@
-import { _decorator, Component, instantiate, math, Node, Prefab } from 'cc'; // 导入 Cocos Creator 的相关模块
+import { _decorator, Component, instantiate, log, math, Node, Prefab } from 'cc'; // 导入 Cocos Creator 的相关模块
 import { Pipe } from './Pipe'; // 导入自定义的 Pipe 类
 const { ccclass, property } = _decorator; // 从装饰器模块中解构所需装饰器
 
@@ -21,6 +21,7 @@ export class PipeManager extends Component {
             const pipeInst = instantiate(this.pipePrefab); // 实例化一个新的管道对象
             this.node.addChild(pipeInst); // 将管道添加为当前节点的子节点
             const randomH = math.randomRangeInt(-100, 100); // 随机生成一个-100 到 100 之间的高度偏移
+            cc.log("随机数",randomH)
             pipeInst.setWorldPosition(this.node.getWorldPosition().add3f(0, randomH, 0)); // 设置管道的位置为当前节点位置加上随机高度
         }
     }
